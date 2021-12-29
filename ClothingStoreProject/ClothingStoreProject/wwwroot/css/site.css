@@ -1,0 +1,121 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: #fffca3;
+}
+.checkmark {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+}
+
+.checkmark_circle {
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    background-color: green;
+    border-radius: 11px;
+    left: 3px;
+    top: 3px;
+}
+
+.checkmark_stem {
+    position: absolute;
+    width: 3px;
+    height: 9px;
+    background-color: #fff;
+    left: 11px;
+    top: 6px;
+}
+
+.checkmark_kick {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background-color: #fff;
+    left: 8px;
+    top: 12px;
+}
+.crossspan {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+}
+.cross {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    background-color: red;
+    border-radius: 11px;
+    left: 3px;
+    top: 2px;
+}
+
+    .cross:after {
+        content: '';
+        height: 15px;
+        border-left: 2px solid #fff;
+        position: absolute;
+        transform: rotate(45deg);
+        top: 1px;
+        left: 8px;
+    }
+
+    .cross:before {
+        content: '';
+        height: 15px;
+        border-left: 2px solid #fff;
+        position: absolute;
+        transform: rotate(-45deg);
+        top: 1px;
+        left: 8px;
+    }
+/*
+ *  STYLE 7
+ */
+.scrollbar {
+    margin-left: 22px;
+    float: left;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-bottom: 25px;
+}
+
+
+#wrapper {
+    text-align: center;
+    margin: auto;
+}
+
+#style-7::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #FFFEDE;
+    border-radius: 5px;
+}
+
+#style-7::-webkit-scrollbar {
+    width: 10px;
+    background-color: #FFFEDE;
+}
+
+#style-7::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, rgb(233, 235, 48)), color-stop(0.72, rgb(248, 234, 69)), color-stop(0.86, rgb(228, 211, 11)));
+}color-stop(0.72, #E3DF59), color-stop(0.86, #EBD52F)

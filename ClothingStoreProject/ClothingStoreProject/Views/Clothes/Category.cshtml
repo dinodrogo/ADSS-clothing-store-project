@@ -1,0 +1,49 @@
+﻿@model IEnumerable<ClothingStoreProject.Models.Clothes>
+
+@{
+    ViewData["Title"] = "Clothes";
+}
+<div class="container-fluid">
+    <div class="container text-center">
+        <h1 class="mb-3 mt-4">Products</h1>
+       
+    </div>
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="cocol-lg-3 col-md-4 col-6">
+                <div class="m-2 p-2 border rounded" style="background-color: #fffdbd">
+                    <div>
+                        <img class="img-fluid mx-0 align-self-auto d-block" src=@Html.DisplayFor(modelItem => item.Image)>
+                        <h2>@item.Title</h2>
+                        <p>
+                                @item.Price MKD
+                                <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+    @* rest of file with view *@
+<div class="text-center">
+@if (ViewBag.Page > 0)
+{
+    <a href="@Url.Action("Index", new { page = ViewBag.Page - 1 })" 
+       class="btn btn-default">
+        &laquo; @ViewBag.Page
+    </a>
+}
+<span class="btn btn-default">
+    @(ViewBag.Page+1)
+</span>
+@if (ViewBag.Page < ViewBag.MaxPage)
+{
+    <a href="@Url.Action("Index", new { page = ViewBag.Page + 1 })" 
+       class="btn btn-default">
+        @(ViewBag.Page+2) &raquo;
+    </a>
+}
+</div>
+</div>
